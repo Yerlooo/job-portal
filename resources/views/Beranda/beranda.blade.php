@@ -86,16 +86,16 @@
                         <a class="nav-link active ms-4" aria-current="page" href="/" style="color: blue;">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active ms-4" aria-current="page" href="/lowongankerja" style="color: #000000;">Lowongan Kerja</a>
+                        <a class="nav-link active ms-4" aria-current="page" href="{{ route('lowongankerja') }}" style="color: #000000;">Lowongan Kerja</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active ms-4" aria-current="page" href="/about" style="color: #000000;">Tentang Kami</a>
+                        <a class="nav-link active ms-4" aria-current="page" href="{{ route('about') }}" style="color: #000000;">Tentang Kami</a>
                     </li>
                 </ul>
 
                 <div class="d-flex" style="margin-right: -25px; position: relative; display: flex; align-items: center;">
         <div style="margin-right: -10px; position: relative;">
-            <a href="/HomePagePerusahaan">
+            <a href="{{ route('HomePagePerusahaan') }}">
                 <button id="companyButton" class="btn" role="button" style="border: 2px solid #FFC94A; margin-right: 25px; background-color: white; padding: 10px;">
                     Perusahaan
                 </button>
@@ -111,8 +111,8 @@
                 Sign In / Sign Up
             </button>
             <div id="dropdownMenuLogin" class="dropdown-menu">
-                <a href="/daftar-perusahaan" class="dropdown-item">Login Sebagai Perusahaan</a>
-                <a href="/login" class="dropdown-item">Login Sebagai Pelamar</a>
+                <a href="{{ route('daftar-perusahaan') }}" class="dropdown-item">Login Sebagai Perusahaan</a>
+                <a href="{{ route('login') }}" class="dropdown-item">Login Sebagai Pelamar</a>
             </div>
         </div>
     </div>
@@ -749,7 +749,7 @@
 
 <div style="display: flex; align-items: center; margin-left: 20px; margin-top: 75px; margin-bottom: 5px;">
     <p style="margin-right: 15px;">Lihat detail</p>
-    <a href="/detailblog" style="margin-bottom: 20px;">--></a>
+    <a href="{{ route('detailblog') }}" style="margin-bottom: 20px;">--></a>
 </div>
                 </div>
             </div>
@@ -773,7 +773,7 @@
 
 <div style="display: flex; align-items: center; margin-left: 20px; margin-top: 75px; margin-bottom: 5px;">
     <p style="margin-right: 15px;">Lihat detail</p>
-    <a href="/detailblog" style="margin-bottom: 20px;">--></a>
+    <a href="{{ route('detailblog') }}" style="margin-bottom: 20px;">--></a>
 </div>
                 </div>
             </div>
@@ -797,7 +797,7 @@
 
 <div style="display: flex; align-items: center; margin-left: 20px; margin-top: 75px; margin-bottom: 5px;">
     <p style="margin-right: 15px;">Lihat detail</p>
-    <a href="/detailblog" style="margin-bottom: 20px;">--></a>
+    <a href="{{ route('detailblog') }}" style="margin-bottom: 20px;">--></a>
 </div>
                 </div>
             </div>
@@ -921,7 +921,7 @@
          document.addEventListener("DOMContentLoaded", function() {
             var isLoggedIn = false; // Replace with actual login check
 
-            document.querySelector('.nav-link[href="/lowongankerja"]').addEventListener('click', function(event) {
+            document.querySelector('.nav-link[href="{{ route('lowongankerja') }}"]').addEventListener('click', function(event) {
                 if (!isLoggedIn) {
                     event.preventDefault();
                     Swal.fire({

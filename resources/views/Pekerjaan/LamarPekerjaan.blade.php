@@ -112,7 +112,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-    <a class="navbar-brand" href="/link-kerjaku">
+    <a class="navbar-brand" href="{{ route('homelogin') }}">
         <img src="img/Logo.png" alt="Logo">
     </a>         
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -122,18 +122,18 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/link-kerjaku" style="color: #000000;">Beranda</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('homelogin') }}" style="color: #000000;">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/lowongankerja" style="color: blue;">Lowongan Kerja</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('lowongankerja') }}" style="color: blue;">Lowongan Kerja</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/about2" style="color: #000000;">Tentang Kami</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('about') }}" style="color: #000000;">Tentang Kami</a>
                 </li>
             </ul>
 
             <div class="d-flex align-items-center">
-    <a href="/ProfillPelamar" class="btn-btn d-flex align-items-center justify-content-center" role="button" style="width: 40px; height: 40px; border-radius: 50%; margin-left: 10px; margin-right: 10px;" title="Olivia Rhye">
+    <a href="{{ route('profilpelamar') }}" class="btn-btn d-flex align-items-center justify-content-center" role="button" style="width: 40px; height: 40px; border-radius: 50%; margin-left: 10px; margin-right: 10px;" title="Olivia Rhye">
         <img src="img/ProfilPelamar.jpg" alt="Profile Image" style="width: 45px; height: 45px; border-radius: 50%;">
     </a>
     @foreach ($users as $user)
@@ -156,13 +156,13 @@
 </div>
 
         <div class="dropdown-divider"></div>
-        <div class="dropdown-item" onclick="window.location.href='/ProfillPelamar';">
+        <div class="dropdown-item" onclick="window.location.href='{{ route('profilpelamar') }}';">
     <img src="svg/edit.svg" alt="Edit Icon" class="dropdown-icon">
     Edit Profil
 </div>
 
         <div class="dropdown-divider"></div>
-        <div class="dropdown-item" onclick="window.location.href='/';">
+        <div class="dropdown-item" onclick="window.location.href='{{ route('logout') }}';">
     <img src="svg/logout.svg" alt="Logout Icon" class="dropdown-icon">
     Logout
 </div>
@@ -205,7 +205,7 @@
 <section style="background-color: #E8F2F7; padding: 50px 20px; display: flex; align-items: center; justify-content: center;">
     <div style="max-width: 800px; width: 100%; margin: 0 auto;">
         <hr style="border: 1px solid black; margin-bottom: 20px;">
-        <form action="/LamarPekerjaan" method="post" style="background-color: #FFFFFF; padding: 30px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <form action="{{ route('postlamarpekerjaan') }}" method="post" style="background-color: #FFFFFF; padding: 30px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
 
             @csrf
 

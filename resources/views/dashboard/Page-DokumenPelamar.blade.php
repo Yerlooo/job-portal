@@ -339,7 +339,7 @@ a.sidebar-link:hover {
         <i class="lni lni-grid-alt"></i>
     </button>
     <div class="sidebar-logo">
-    <a href="/PageDashboard">
+    <a href="{{ route('dashboardperusahaan') }}">
     <span style="color: #FFDB00;">Link</span>
     <span style="color: #3572EF;">Kerjaku</span>
 </a>
@@ -350,7 +350,7 @@ a.sidebar-link:hover {
 <ul class="sidebar-nav">
 
 <li class="sidebar-item" style="margin-top: -20px;">
-        <a href="/PageDashboard" class="sidebar-link">
+        <a href="{{ route('dashboardperusahaan') }}" class="sidebar-link">
         <i class="lni lni-protection"></i>
         <span>Dashboard</span>
         </a>
@@ -364,17 +364,17 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </a>
 <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="margin-top: 10px;">
 <li class="sidebar-item">
-<a href="/Page-StatusPelamar" class="sidebar-link" style="color: #FCDC94;">
+<a href="{{ route('statuspelamar') }}" class="sidebar-link" style="color: #FCDC94;">
     <img src="img/resume.png" alt="Logo" width="25px" height=""> Status Pelamar
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-BuatLowongan" class="sidebar-link">
+<a href="{{ route('buatlowongan') }}" class="sidebar-link">
     <img src="img/vacancy.png" alt="Logo" width="25px" style="margin-top: 10px;"> Buat Lowongan
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-LowonganKerja" class="sidebar-link">
+<a href="{{ route('lowongankerjaperusahaan') }}" class="sidebar-link">
     <img src="img/StatusPelamar.png" alt="Logo" width="25px" style="margin-top: 10px;"> Lowongan Kerja
 </a>
 </li>

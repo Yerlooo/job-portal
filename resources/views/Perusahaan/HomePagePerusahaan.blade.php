@@ -27,21 +27,21 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/Home-Perusahaan" style="color: #146D9A;">Beranda</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('HomePagePerusahaan') }}" style="color: #146D9A;">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/aboutperusahaan" style="color: #082A3C;">About Us</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('aboutperusahaan') }}" style="color: #082A3C;">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/Kontak-Perusahaan" style="color: #082A3C;">Contact</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('kontakperusahaan') }}" style="color: #082A3C;">Contact</a>
                 </li>
             </ul>
 
             <div class="d-flex align-items-center">
-    <a href="/PageLogin-Dashboard" class="btn btn-secondary" role="button" style="background-color: white; border: 2px solid #FFC94A; color: #000000; margin-right: 15px;">
+    <a href="{{ route('loginperusahaan') }}" class="btn btn-secondary" role="button" style="background-color: white; border: 2px solid #FFC94A; color: #000000; margin-right: 15px;">
         Sign In
     </a>
-    <a href="/daftar-perusahaan" class="btn btn-secondary" role="button" style="background-color: #FFC94A; border: none; color: #000000;">
+    <a href="{{ route('daftar-perusahaan') }}" class="btn btn-secondary" role="button" style="background-color: #FFC94A; border: none; color: #000000;">
         Sign Up
     </a>
 </div>
@@ -286,7 +286,7 @@
 
 <div style="display: flex; align-items: center; margin-left: 20px; margin-top: 75px; margin-bottom: 5px;">
     <p style="margin-right: 15px;">Lihat detail</p>
-    <a href="/detailblog" style="margin-bottom: 20px;">--></a>
+    <a href="{{ route('detailblog') }}" style="margin-bottom: 20px;">--></a>
 </div>
                 </div>
             </div>
@@ -310,7 +310,7 @@
 
 <div style="display: flex; align-items: center; margin-left: 20px; margin-top: 75px; margin-bottom: 5px;">
     <p style="margin-right: 15px;">Lihat detail</p>
-    <a href="/Detail-Blog" style="margin-bottom: 20px;">--></a>
+    <a href="{{ route('detailblog') }}" style="margin-bottom: 20px;">--></a>
 </div>
                 </div>
             </div>
@@ -334,7 +334,7 @@
 
 <div style="display: flex; align-items: center; margin-left: 20px; margin-top: 75px; margin-bottom: 5px;">
     <p style="margin-right: 15px;">Lihat detail</p>
-    <a href="/Detail-Blog" style="margin-bottom: 20px;">--></a>
+    <a href="{{ route('detailblog') }}" style="margin-bottom: 20px;">--></a>
 </div>
                 </div>
             </div>

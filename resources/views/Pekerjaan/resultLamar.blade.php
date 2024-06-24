@@ -90,7 +90,7 @@
 
         <!-- Tombol Kembali -->
         <div class="back-button">
-            <a href="/link-kerjaku" class="btn btn-primary">Kembali ke Halaman Utama</a>
+            <a href="{{ route('homelogin') }}" class="btn btn-primary">Kembali ke Halaman Utama</a>
         </div>
     </div>
 

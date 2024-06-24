@@ -71,13 +71,13 @@
                         <a class="nav-link active ms-4" aria-current="page" href="/" style="color: blue;">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active ms-4" aria-current="page" href="/lowongankerja" style="color: #000000;">Lowongan Kerja</a>
+                        <a class="nav-link active ms-4" aria-current="page" href="{{ route('lowongankerja') }}" style="color: #000000;">Lowongan Kerja</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active ms-4" aria-current="page" href="/about" style="color: #000000;">Tentang Kami</a>
+                        <a class="nav-link active ms-4" aria-current="page" href="{{ route('about') }}" style="color: #000000;">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active ms-4" aria-current="page" href="/aboutperusahaan" style="color: #000000;">Tentang Perusahaan</a>
+                        <a class="nav-link active ms-4" aria-current="page" href="{{ route('aboutperusahaan') }}" style="color: #000000;">Tentang Perusahaan</a>
                     </li>
                 </ul>
             <div class="d-flex align-items-center">
@@ -668,7 +668,7 @@
 
 <div style="display: flex; align-items: center; margin-left: 20px; margin-top: 75px; margin-bottom: 5px;">
     <p style="margin-right: 15px;">Lihat detail</p>
-    <a href="/detailblog" style="margin-bottom: 20px;">--></a>
+    <a href="{{ route('detailblog') }}" style="margin-bottom: 20px;">--></a>
 </div>
                 </div>
             </div>

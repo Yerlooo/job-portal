@@ -26,7 +26,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('homee') }}">
             <img src="img/Logo.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -36,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/" style="color: #000000;">Beranda</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('homee') }}" style="color: #000000;">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/lowongankerja2" style="color: #000000;">Lowongan Kerja</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('lowongankerja') }}" style="color: #000000;">Lowongan Kerja</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/about" style="color: #000000;">Tentang Kami</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('about') }}" style="color: #000000;">Tentang Kami</a>
                 </li>
             </ul>
         </div>
@@ -371,7 +371,7 @@
 
 
         <div style="display: flex; justify-content: center; margin-top: 20px;">
-    <a href="/LamarPekerjaan" style="display: inline-block; width: 373px; height: 58px; background-color: #FFC94A; color: #000000; border: none; border-radius: 5px; text-decoration: none; text-align: center; line-height: 58px;">
+    <a href="{{ route('lamarpekerjaan') }}" style="display: inline-block; width: 373px; height: 58px; background-color: #FFC94A; color: #000000; border: none; border-radius: 5px; text-decoration: none; text-align: center; line-height: 58px;">
         Lamar Pekerjaan Ini
     </a>
 </div>

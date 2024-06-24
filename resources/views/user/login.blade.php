@@ -58,7 +58,7 @@
                     <div class="card-body text-center">
                     <img src="img/Logo.png" alt="Brand Logo" class="mb-4" style="width: 175px;">
                     <h2 class="mb-4" style="margin-top: -45px;">Login Sebagai Pelamar</h2>
-                        <form action="/login" method="post">
+                        <form action="{{ route('postlogin') }}" method="post">
                         @csrf
                             <div class="form-group">
                                 <div class="input-group" style="border: 1px solid #146D9A; background-color: #FFFFFF;">

@@ -74,4 +74,8 @@ class LoginController extends Controller
         Alert::errorperusahaan('Sukses', 'Email atau Passwird salah, Silahkan Cek Kembali!')->persistent(true);
         return back()->withInput($request->only('email', 'remember'));
     }
+    public function userAfterLogin()
+    {
+        return view('Beranda.beranda-after-login');
+    }
 }

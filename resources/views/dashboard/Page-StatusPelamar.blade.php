@@ -383,7 +383,7 @@ a.sidebar-link:hover {
 <ul class="sidebar-nav">
 
 <li class="sidebar-item" style="margin-top: -20px;">
-        <a href="/PageDashboard" class="sidebar-link">
+        <a href="{{ route('dashboardperusahaan') }}" class="sidebar-link">
         <i class="lni lni-protection"></i>
         <span>Dashboard</span>
         </a>
@@ -397,17 +397,17 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </a>
 <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="margin-top: 10px;">
 <li class="sidebar-item">
-<a href="/Page-StatusPelamar" class="sidebar-link" style="color: #FCDC94;">
+<a href="{{ route('statuspelamar') }}" class="sidebar-link" style="color: #FCDC94;">
     <img src="img/resume.png" alt="Logo" width="25px" height=""> Status Pelamar
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-BuatLowongan" class="sidebar-link">
+<a href="{{ route('buatlowongan') }}" class="sidebar-link">
     <img src="img/vacancy.png" alt="Logo" width="25px" style="margin-top: 10px;"> Buat Lowongan
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-LowonganKerja" class="sidebar-link">
+<a href="{{ route('lowongankerjaperusahaan') }}" class="sidebar-link">
     <img src="img/StatusPelamar.png" alt="Logo" width="25px" style="margin-top: 10px;"> Lowongan Kerja
 </a>
 </li>
@@ -442,11 +442,11 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
         </svg>
     </div>
     <div id="myDropdown" class="dropdown-content" style="top: 100%; left: -30px;">
-    <a href="/Page-Profill">
+    <a href="{{ route('profilperusahaan') }}">
             <img src="img/editing.png" alt="Profile Icon" width="16" height="16">
             <span>Profile</span>
         </a>
-        <a href="/">
+        <a href="{{ route('logout') }}">
             <img src="img/logout.png" alt="Profile Icon" width="16" height="16">
             <span>Logout</span>
         </a>    </div>
@@ -493,7 +493,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
         <div class="col-12">
         @foreach ($selfDescriptions as $index => $selfDescription)
     <div class="card mb-3">
-        <a href="/PageOverlay-Dashboard" style="text-decoration: none; color: inherit;">
+        <a href="{{ route('overlay') }}" style="text-decoration: none; color: inherit;">
             <!-- Use a static image for all applicants -->
             <img src="img/gambarpelamar.jpg" class="card-img-left" alt="Card Image">
                     </a>

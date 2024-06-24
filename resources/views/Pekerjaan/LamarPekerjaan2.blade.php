@@ -121,7 +121,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
-    <a class="navbar-brand" href="/link-kerjaku">
+    <a class="navbar-brand" href="{{ route('homelogin') }}">
         <img src="img/Logo.png" alt="Logo">
     </a>         
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -215,7 +215,7 @@
 <section style="background-color: #E8F2F7; padding: 50px; display: flex; align-items: center; justify-content: center;">
     <div style="max-width: 600px; width: 100%; background-color: #FFFFFF; padding: 30px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
         <h6>Kota*</h6>
-        <form action="/LamarPekerjaan2" method="post">
+        <form action="{{ route('postlamarpekerjaan2') }}" method="post">
 
             @csrf
 
@@ -234,7 +234,7 @@
             </div>
 
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
-                <a href="/LamarPekerjaan" style="text-decoration: none;">
+                <a href="{{ route('lamarpekerjaan') }}" style="text-decoration: none;">
                     <button type="button" class="btn btn-secondary" style="background-color: #FFC94A; border: none; border-radius: 8px; color: #000000; padding: 10px 20px; cursor: pointer;">
                         Kembali
                     </button>

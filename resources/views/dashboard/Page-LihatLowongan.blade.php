@@ -320,11 +320,11 @@ a.sidebar-link:hover {
         <i class="lni lni-grid-alt"></i>
     </button>
     <div class="sidebar-logo">
-    <a href="/PageDashboard">Link Kerjaku</a>
+    <a href="{{ route('dashboardperusahaan') }}">Link Kerjaku</a>
     </div>
 </div>
 <hr size="5" width="100%" color="#FFFFFF">
-<a href="/profill">
+<a href="{{ route('profilperusahaan') }}">
     <img src="img/google.png" alt="Logo" width="31.94px" height="33px" style="display: inline-block; margin-left: 20px;">
 </a>
 <span style="vertical-align: middle; color: #FFFFFF; margin-left: 75px; margin-top: -30px;">Google</span>
@@ -333,7 +333,7 @@ a.sidebar-link:hover {
             <ul class="sidebar-nav">
 
             <li class="sidebar-item">
-                    <a href="/Page-Profill" class="sidebar-link">
+                    <a href="{{ route('profilperusahaan') }}" class="sidebar-link">
                         <i class="lni lni-user"></i>
                         <span>Profile</span>
                     </a>
@@ -347,17 +347,17 @@ a.sidebar-link:hover {
     </a>
     <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="margin-top: 10px;">
         <li class="sidebar-item">
-            <a href="/Page-StatusPelamar" class="sidebar-link">
+            <a href="{{ route('statuspelamar') }}" class="sidebar-link">
                 <img src="img/resume.png" alt="Logo" width="25px" height=""> Status Pelamar
             </a>
         </li>
         <li class="sidebar-item">
-            <a href="/Page-BuatLowongan" class="sidebar-link">
+            <a href="{{ route('buatlowongan') }}" class="sidebar-link">
                 <img src="img/vacancy.png" alt="Logo" width="25px" style="margin-top: 10px;"> Buat Lowongan
             </a>
         </li>
         <li class="sidebar-item">
-            <a href="#" class="sidebar-link" style="color: #6FDCE3;">
+            <a href="{{ route('lowongankerjaperusahaan') }}" class="sidebar-link" style="color: #6FDCE3;">
                 <img src="img/StatusPelamar.png" alt="Logo" width="25px" style="margin-top: 10px;"> Lowongan Kerja
             </a>
         </li>
@@ -366,7 +366,7 @@ a.sidebar-link:hover {
 
             </ul>
             <div class="sidebar-footer">
-                <a href="/" class="sidebar-link">
+                <a href="{{ route('logout') }}" class="sidebar-link">
                     <i class="lni lni-exit"></i>
                     <span>Logout</span>
                 </a>

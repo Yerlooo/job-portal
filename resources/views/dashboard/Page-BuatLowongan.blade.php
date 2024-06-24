@@ -438,17 +438,17 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </a>
 <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="margin-top: 10px;">
 <li class="sidebar-item">
-<a href="/Page-StatusPelamar" class="sidebar-link">
+<a href="{{ route('statuspelamar') }}" class="sidebar-link">
     <img src="img/resume.png" alt="Logo" width="25px" height=""> Status Pelamar
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-BuatLowongan" class="sidebar-link" style="color: #FCDC94;">
+<a href="{{ route('buatlowongan') }}" class="sidebar-link" style="color: #FCDC94;">
     <img src="img/vacancy.png" alt="Logo" width="25px" style="margin-top: 10px;"> Buat Lowongan
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-LowonganKerja" class="sidebar-link">
+<a href="{{ route('lowongankerjaperusahaan') }}" class="sidebar-link">
     <img src="img/StatusPelamar.png" alt="Logo" width="25px" style="margin-top: 10px;"> Lowongan Kerja
 </a>
 </li>
@@ -456,7 +456,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </li>
 
 <li class="sidebar-item" style="margin-top: 25px;">
-        <a href="/Page-Profill" class="sidebar-link">
+        <a href="{{ route('profilperusahaan') }}" class="sidebar-link">
             <i class="lni lni-user"></i>
             <span>Profile</span>
         </a>
@@ -521,7 +521,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 
 <section style="background-color:  #FFFFFF; padding: 70px; display: flex; align-items: center; justify-content: center;">
     <div style="margin-left: 55px; margin-top: -35px;">
-        <form action="/BuatLowongan" method="post" class="form-container" enctype="multipart/form-data">
+        <form action="{{ route('postbuatlowongan') }}" method="post" class="form-container" enctype="multipart/form-data">
         @csrf
         <h2>Buat Lowongan Pekerjaan</h2>
 
@@ -557,7 +557,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
         </div>
 
         <div class="section-buttons">
-            <a href="/BuatLowongan2">
+            <a href="{{ route('buatlowongan2') }}">
                 <button type="submit">
                     Selanjutnya
                 </button>

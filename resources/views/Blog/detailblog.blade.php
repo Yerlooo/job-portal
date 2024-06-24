@@ -36,10 +36,10 @@
                         <a class="nav-link active ms-4" aria-current="page" href="/" style="color: #000000;">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active ms-4" aria-current="page" href="/lowongankerja2" style="color: #000000;">Lowongan Kerja</a>
+                        <a class="nav-link active ms-4" aria-current="page" href="{{ route('lowongankerja') }}" style="color: #000000;">Lowongan Kerja</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active ms-4" aria-current="page" href="/about" style="color: #000000;">Tentang Kami</a>
+                        <a class="nav-link active ms-4" aria-current="page" href="{{ route('about') }}" style="color: #000000;">Tentang Kami</a>
                     </li>
                 </ul>
                 <div class="d-flex">

@@ -36,9 +36,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::group(['middleware' => 'guest'], function(){
-    Route::get('/', [AuthController::class, 'login'])->name('login');
-});
+Route::get('/home', [AuthController::class, 'login'])->name('homee');
 
 // Route::group(['middleware' => ['auth', 'verified']], function() {
 //     Route::get('/link-kerjaku', [AuthController::class, 'getLogin']);
@@ -56,54 +54,56 @@ Route::group(['middleware' => ['auth', 'checkrole:1,2']], function() {
 Route::group(['middleware' => ['auth', 'checkrole:2']], function(){
     Route::get('/perusahaan', [PerusahaanController::class, 'getShowHomePagePerusahaan']);
 
-    Route::get('/DetailPerusahaan', [PerusahaanController::class, 'getShowDetailPerusahaan']);
-    Route::get('/LihatPerusahaan', [PerusahaanController::class, 'getshowLihatPerusahaan']);
-    Route::get('/LihatPerusahaan2', [PerusahaanController::class, 'getShowLihatPerusahaan2']);
-    Route::get('/ProfillPerusahaan', [PerusahaanController::class, 'getShowProfillPerusahaan']);
+    Route::get('/DetailPerusahaan', [PerusahaanController::class, 'getShowDetailPerusahaan'])->name('detailperusahaan');
+    Route::get('/LihatPerusahaan', [PerusahaanController::class, 'getshowLihatPerusahaan'])->name('lihatperusahaan');
+    Route::get('/LihatPerusahaan2', [PerusahaanController::class, 'getShowLihatPerusahaan2'])->name('lihatperusahaan2');
+    Route::get('/ProfillPerusahaan', [PerusahaanController::class, 'getShowProfillPerusahaan'])->name('profilperusahaan');
     
     
     
 });
-Route::get('/Kontak-Perusahaan', [PerusahaanController::class, 'getShowKontakPerusahaan']);
-Route::post('/Kontak-Perusahaan', [PerusahaanController::class, 'postKontak']);
-Route::get('/HomePagePerusahaan', [PerusahaanController::class, 'getShowHomePagePerusahaan']);
-Route::get('/BuatLowongan', [JobSeekerController::class, 'index']);
-Route::get('/BuatLowongan2', [LowonganKerjaController::class, 'getShowBuatLowongann']);
-Route::get('/BuatLowongan3', [LowonganKerjaController::class, 'getShowBuatLowongannn']);
-Route::post('/BuatLowongan', [JobProviderController::class, 'store']);
-Route::post('/BuatLowongan2', [JobProviderController::class, 'storePage']);
-Route::post('/BuatLowongan3', [JobProviderController::class, 'storePageThree']);
+Route::get('/Kontak-Perusahaan', [PerusahaanController::class, 'getShowKontakPerusahaan'])->name('kontakperusahaan');
+Route::post('/Kontak-Perusahaan', [PerusahaanController::class, 'postKontak'])->name('postkontakperusahaan');
+Route::get('/HomePagePerusahaan', [PerusahaanController::class, 'getShowHomePagePerusahaan'])->name('HomePagePerusahaan');
+Route::post('/BuatLowongan', [JobProviderController::class, 'store'])->name('postbuatlowongan');
+Route::post('/BuatLowongan2', [JobProviderController::class, 'storePage'])->name('postbuatlowongan2');
+Route::post('/BuatLowongan3', [JobProviderController::class, 'storePageThree'])->name('postbuatlowongan3');
 
-Route::get('/PageLogin-Dashboard', [DashboardController::class, 'getShowLoginDashboard']);
-Route::get('/PageDashboard', [DashboardController::class, 'getShowDashboardHome'])->middleware('auth');
-Route::get('/PageOverlay-Dashboard', [DashboardController::class, 'getShowOverlay'])->middleware('auth');
-Route::get('/Page-DokumenPelamar', [DashboardController::class, 'getShowDokumen'])->middleware('auth');
-Route::get('/Page-BuatLowongan', [DashboardController::class, 'getShowCreateLowongan'])->middleware('auth');
-Route::get('/Page-BuatLowongan2', [DashboardController::class, 'getShowCreateLowongan2'])->middleware('auth');
-Route::get('/Page-BuatLowongan3', [DashboardController::class, 'getShowCreateLowongan3'])->middleware('auth');
-Route::get('/Page-LihatLowongan', [DashboardController::class, 'getShowLihatLowongan'])->middleware('auth');
-Route::get('/Page-LowonganKerja', [DashboardController::class, 'getShowPageLowonganKerja'])->middleware('auth');
-Route::get('/Page-Profill', [DashboardController::class, 'getShowProfill']);
-Route::get('/Page-StatusPelamar', [DashboardController::class, 'getShowStatus']);
-Route::get('/Page-EditProfill', [DashboardController::class, 'getShowEdit']);
-Route::get('/api/job/{jobTitle}', [DashboardController::class, 'getJobData']);
+Route::get('/PageLogin-Dashboard', [DashboardController::class, 'getShowLoginDashboard'])->name('loginperusahaan');
+Route::get('/PageDashboard', [DashboardController::class, 'getShowDashboardHome'])->middleware('auth')->name('dashboardperusahaan');
+Route::get('/PageOverlay-Dashboard', [DashboardController::class, 'getShowOverlay'])->middleware('auth')->name('overlay');
+Route::get('/Page-DokumenPelamar', [DashboardController::class, 'getShowDokumen'])->middleware('auth')->name('dokumen');
+Route::get('/Page-BuatLowongan', [DashboardController::class, 'getShowCreateLowongan'])->middleware('auth')->name('buatlowongan');
+Route::get('/Page-BuatLowongan2', [DashboardController::class, 'getShowCreateLowongan2'])->middleware('auth')->name('buatlowongan2');
+Route::get('/Page-BuatLowongan3', [DashboardController::class, 'getShowCreateLowongan3'])->middleware('auth')->name('buatlowongan3');
+Route::get('/Page-LihatLowongan', [DashboardController::class, 'getShowLihatLowongan'])->middleware('auth')->name('lihatlowongan');
+Route::get('/Page-LowonganKerja', [DashboardController::class, 'getShowPageLowonganKerja'])->middleware('auth')->name('lowongankerjaperusahaan');
+Route::get('/Page-Profill', [DashboardController::class, 'getShowProfill'])->name('profilperusahaan');
+Route::get('/Page-StatusPelamar', [DashboardController::class, 'getShowStatus'])->name('statuspelamar');
+Route::get('/Page-EditProfill', [DashboardController::class, 'getShowEdit'])->name('editprofilperusahaan');
+Route::get('/api/job/{jobTitle}', [DashboardController::class, 'getJobData'])->name('jobtitle');
 
-Route::group(['middleware' => ['auth', 'checkrole:1']], function(){
-    Route::get('/link-kerjaku', function(){return view('Beranda.beranda-after-login',[]);})->middleware('auth');
-
-    Route::get('/ProfillPelamar', [PelamarController::class, 'getShowProfillPelamar']);
-    Route::get('/HomePagePelamar', [PelamarController::class, 'getShowHomePagePelamar']);
+Route::group(['middleware' => ['auth', 'checkrole:1']], function () {
+    Route::get('/link-Kerjaku', [LoginController::class, 'userAfterLogin'])->middleware('auth')->name('homelogin');
     
+    Route::get('/ProfillPelamar', [PelamarController::class, 'getShowProfillPelamar'])->name('profilpelamar');
+    Route::get('/HomePagePelamar', [PelamarController::class, 'getShowHomePagePelamar'])->name('HomePagePelamar');
     
     Route::resource('applications', ApplicationController::class);
 });
-Route::get('/StatusPelamar', [PelamarController::class, 'getShowStatusPelamar']);
-Route::get('/LamarPekerjaan', [LowonganKerjaController::class, 'getShowLamarKerja']);
-Route::get('/LamarPekerjaan2', [LowonganKerjaController::class, 'getShowLamarKerjaa']);
-Route::get('/LamarPekerjaan3', [LowonganKerjaController::class, 'getShowLamarKerjaaa']);
-Route::post('/LamarPekerjaan', [LamarPekerjaanController::class, 'postDescriptions']);
-Route::post('/LamarPekerjaan2', [LamarPekerjaanController::class, 'postLocations']);
-Route::post('/LamarPekerjaan3', [LamarPekerjaanController::class, 'postMoreInfor']);
+Route::get('/resultLamar', [LamarPekerjaanController::class, 'resultLamar'])->middleware('auth')->name('resultlamar');
+
+// Route::get('/link-kerjaku', function () {
+//     return view('Beranda.beranda-after-login');
+// })->middleware('auth')->name('homelogin');
+
+
+Route::get('/LamarPekerjaan', [LowonganKerjaController::class, 'getShowLamarKerja'])->name('lamarpekerjaan');
+Route::get('/LamarPekerjaan2', [LowonganKerjaController::class, 'getShowLamarKerjaa'])->name('lamarpekerjaan2');
+Route::get('/LamarPekerjaan3', [LowonganKerjaController::class, 'getShowLamarKerjaaa'])->name('lamarpekerjaan3');
+Route::post('/LamarPekerjaan', [LamarPekerjaanController::class, 'postDescriptions'])->name('postlamarpekerjaan');
+Route::post('/LamarPekerjaan2', [LamarPekerjaanController::class, 'postLocations'])->name('postlamarpekerjaan2');
+Route::post('/LamarPekerjaan3', [LamarPekerjaanController::class, 'postMoreInfor'])->name('postlamarpekerjaan3');
 
 Route::get('/auth/redirect', [SocialController::class, 'redirect'])->name('google.redirect');
 Route::get('/google/redirect', [SocialController::class, 'googleCallback'])->name('google.callback');
@@ -112,61 +112,39 @@ Route::get('auth/redirect/facebook', [FacebookController::class, 'redirectToFace
 Route::get('facebook/redirect', [FacebookController::class, 'handleFacebookCallback'])->name('facebook.callback');
 
 Route::get('/', function(){return view('Beranda.beranda',[]);});
-Route::get('/link-kerjaku', function(){return view('Beranda.beranda-after-login',[]);})->middleware('auth');
+
 // login
-Route::get('/login', [LoginController::class, 'getShowLogin']);
-Route::post('/login', [LoginController::class, 'getAuthenticateLogin']);
+Route::get('/login', [LoginController::class, 'getShowLogin'])->name('login');
+Route::post('/login', [LoginController::class, 'getAuthenticateLogin'])->name('postlogin');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/loginperusahaan', [LoginController::class, 'getShowLoginPerusahaan']);
-Route::post('loginperusahaan', [LoginController::class, 'getAuthenticateLogin']);
+Route::post('loginperusahaan', [LoginController::class, 'getAuthenticateLogin'])->name('postloginperusahaan');
 
 //register
-Route::get('/register', [RegisterController::class, 'getShowRegister']);
-Route::post('/register', [RegisterController::class, 'getStoreRegister']);
-Route::get('/registerperusahaan', [RegisterController::class, 'getShowRegisterPerusahaan']);
-Route::post('/registerperusahaan', [RegisterController::class, 'getStoreRegisterPerusahaan']);
-
-//perusahaan
-// Route::get('/DetailPerusahaan', [PerusahaanController::class, 'getShowDetailPerusahaan']);
-// Route::get('/LihatPerusahaan', [PerusahaanController::class, 'getshowLihatPerusahaan']);
-// Route::get('/LihatPerusahaan2', [PerusahaanController::class, 'getShowLihatPerusahaan2']);
-// Route::get('/ProfillPerusahaan', [PerusahaanController::class, 'getShowProfillPerusahaan']);
-// Route::get('/HomePagePerusahaan', [PerusahaanController::class, 'getShowHomePagePerusahaan']);
-// Route::get('/Kontak-Perusahaan', [PerusahaanController::class, 'getShowKontakPerusahaan']);
-
-//lowongankerja
-// Route::get('/BuatLowongan', [JobSeekerController::class, 'index']);
-// Route::get('/BuatLowongan2', [LowonganKerjaController::class, 'getShowBuatLowongann']);
-// Route::get('/BuatLowongan3', [LowonganKerjaController::class, 'getShowBuatLowongannn']);
-// Route::post('/BuatLowongan', [JobProviderController::class, 'store']);
-// Route::post('/BuatLowongan2', [JobProviderController::class, 'storePage']);
-// Route::post('/BuatLowongan3', [JobProviderController::class, 'storePageThree']);
+Route::get('/register', [RegisterController::class, 'getShowRegister'])->name('register');
+Route::post('/register', [RegisterController::class, 'getStoreRegister'])->name('postregister');
+Route::post('/registerperusahaan', [RegisterController::class, 'getStoreRegisterPerusahaan'])->name('postregisterperusahaan');
 
 // Route::get('/lowongan/{id}', [JobProviderController::class, 'show']);
-Route::get('/lowongan-kerja', [JobController::class, 'index']);
+Route::get('/lowongan-kerja', [JobController::class, 'index'])->name('lowongankerja');
 
-Route::get('/result', [JobProviderController::class, 'result']);
-Route::get('/resultLamar', [LamarPekerjaanController::class, 'resultLamar']);
-Route::get('/lowongankerja', [LowonganKerjaController::class, 'getShowLowonganKerja']);
-Route::get('/lowongankerja2', [LowonganKerjaController::class, 'getShowLowonganKerjaa']);
-Route::get('/unggahlowongan', [LowonganKerjaController::class, 'getShowUnggahLowongan']);
-Route::get('/lowongandisimpan', [LowonganKerjaController::class, 'saveLowongan']);
-Route::get('/DetailPekerjaan', [LowonganKerjaController::class, 'getShowDetailKerja']);
+Route::get('/result', [JobProviderController::class, 'result'])->name('result');
+Route::get('/lowongankerja', [LowonganKerjaController::class, 'getShowLowonganKerja'])->name('lowongankerja');
+Route::get('/lowongankerja2', [LowonganKerjaController::class, 'getShowLowonganKerjaa'])->name('lowongankerja2');
+Route::get('/unggahlowongan', [LowonganKerjaController::class, 'getShowUnggahLowongan'])->name('unggahlowongan');
+Route::get('/lowongandisimpan', [LowonganKerjaController::class, 'saveLowongan'])->name('lowongandisimpan');
+Route::get('/DetailPekerjaan', [LowonganKerjaController::class, 'getShowDetailKerja'])->name('detailpekerjaan');
 
 //about
-Route::get('/about', [AboutController::class, 'getShowAboutt']);
+Route::get('/about', [AboutController::class, 'getShowAboutt'])->name('about');
 Route::get('/about2', [AboutController::class, 'getShowAbout']);
-Route::get('/aboutperusahaan', [AboutController::class, 'getShowAboutPerusahaan']);
-
-//Route::get('/StatusPelamar', [PelamarController::class, 'getShowStatusPelamar']);
-// Route::get('HomePagePelamar', [PelamarController::class, 'getShowHomePagePelamar']);
+Route::get('/aboutperusahaan', [AboutController::class, 'getShowAboutPerusahaan'])->name('aboutperusahaan');
 
 //blog
-Route::get('/detailblog', [BlogController::class, 'getDetailBlog']);
-Route::get('/detailblog2', [BlogController::class, 'getDetailSecBlog']);
+Route::get('/detailblog', [BlogController::class, 'getDetailBlog'])->name('detailblog');
+Route::get('/detailblog2', [BlogController::class, 'getDetailSecBlog'])->name('detailblog2');
 Route::get('/detailblog3', [BlogController::class, 'getDetailThirdBlog']);
-Route::post('/detailblog', [BlogController::class, 'postBlog']);
-Route::get('/kehidupanbudaya', [KehidupanBudayaController::class, 'getShowKB']);
+Route::post('/detailblog', [BlogController::class, 'postBlog'])->name('postdetailblog');
+Route::get('/kehidupanbudaya', [KehidupanBudayaController::class, 'getShowKB'])->name('kehidupanbudaya');
 
 Route::get('/PopUpStatus', function () {return view('PopUpStatus', ["title" => "PopUpStatus"]);});
 
@@ -201,23 +179,4 @@ Route::get('/search', [JobProviderController::class, 'search'])->name('search');
 Route::get('/apply/{job}', [JobApplicationController::class, 'create'])->name('apply.create');
 Route::post('/apply', [JobApplicationController::class, 'store'])->name('apply.store');
 
-// Route::get('/LamarPekerjaan', [LowonganKerjaController::class, 'getShowLamarKerja']);
-// Route::get('/LamarPekerjaan2', [LowonganKerjaController::class, 'getShowLamarKerjaa']);
-// Route::get('/LamarPekerjaan3', [LowonganKerjaController::class, 'getShowLamarKerjaaa']);
-// Route::get('/pekerjaan', [LowonganKerjaController::class, 'getShowPekerjaan']);
-// Route::post('/LamarPekerjaan', [LamarPekerjaanController::class, 'postDescriptions']);
-// Route::post('/LamarPekerjaan2', [LamarPekerjaanController::class, 'postLocations']);
-// Route::post('/LamarPekerjaan3', [LamarPekerjaanController::class, 'postMoreInfor']);
-
-Route::get('/daftar-perusahaan', [DashboardController::class, 'getShowRegisterDashboard']);
-// Route::get('/PageDashboard', [DashboardController::class, 'getShowDashboardHome']);
-// Route::get('/PageLogin-Dashboard', [DashboardController::class, 'getShowLoginDashboard']);
-// Route::get('/dashboard-overlay', [DashboardController::class, 'getShowOverlay']);
-// Route::get('/Page-BuatLowongan', [DashboardController::class, 'getShowCreateLowongan']);
-// Route::get('/Page-BuatLowongan2', [DashboardController::class, 'getShowCreateLowongan2']);
-// Route::get('/Page-BuatLowongan3', [DashboardController::class, 'getShowCreateLowongan3']);
-// Route::get('/Page-LihatLowongan', [DashboardController::class, 'getShowLihatLowongan']);
-// Route::get('/Page-LowonganKerja', [DashboardController::class, 'getShowPageLowonganKerja']);
-// Route::get('/Page-Profill', [DashboardController::class, 'getShowProfill']);
-// Route::get('/Page-StatusPelamar', [DashboardController::class, 'getShowStatus']);
-// Route::get('/Page-EditProfill', [DashboardController::class, 'getShowEdit']);
+Route::get('/daftar-perusahaan', [DashboardController::class, 'getShowRegisterDashboard'])->name('daftar-perusahaan');

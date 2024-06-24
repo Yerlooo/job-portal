@@ -545,12 +545,12 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </div>
 
     <!-- Garis vertikal -->
-    <div style="position: absolute; width: 1px; height: 147%; background-color: #000000; margin-left: 455px; margin-top: -2030px;"></div>
+    <div style="position: absolute; width: 1px; height: 147%; background-color: #000000; margin-left: 455px; margin-top: -2720px;"></div>
 
     <!-- Kartu besar di sebelah kanan -->
     <div style="width: 644px; height: 874px; background-color: #FFFFFF; margin-left: 555px; border-radius: 20px; display: flex; align-items: center; justify-content: center;">
         <!-- Isi dari kartu besar -->
-        <div id="largeCard" style="display: flex; justify-content: center; align-items: center; height: 100vh; margin-left: 430px; margin-top: -4030px;">
+        <div id="largeCard" style="display: flex; justify-content: center; align-items: center; height: 100vh; margin-left: 430px; margin-top: -5385px;">
     <div style="width: 1200px; height: 1231px; background-color: #FFFFFF; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px; box-sizing: border-box; margin-left: -75px; margin-top: 305px;">
         @foreach ($selfDescriptions as $index => $selfDescription)
             @if ($index == 0)

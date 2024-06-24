@@ -82,7 +82,7 @@
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-secondary btn-block" style="background-color: #146D9A;">Buat Akun</button>
-                            <p class="mt-5">Sudah punya akun? <a href="/PageLogin-Dashboard" style="color: blue;">Login</a></p>
+                            <p class="mt-5">Sudah punya akun? <a href="{{ route('loginperusahaan') }}" style="color: blue;">Login</a></p>
                         </form>
                     </div>
                 </div>

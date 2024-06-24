@@ -113,18 +113,18 @@
                     });
                 </script>
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/aboutperusahaan" style="color: #082A3C;">About Us</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('aboutperusahaan') }}" style="color: #082A3C;">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active ms-4" aria-current="page" href="/Kontak-Perusahaan" style="color: #082A3C;">Contact</a>
+                    <a class="nav-link active ms-4" aria-current="page" href="{{ route('kontakperusahaan') }}" style="color: #082A3C;">Contact</a>
                 </li>
             </ul>
 
             <div class="d-flex align-items-center">
-    <a href="/PageLogin-Dashboard" class="btn btn-secondary" role="button" style="background-color: white; border: 2px solid #FFC94A; color: #000000; margin-right: 15px;">
+    <a href="{{ route('loginperusahaan') }}" class="btn btn-secondary" role="button" style="background-color: white; border: 2px solid #FFC94A; color: #000000; margin-right: 15px;">
         Sign In
     </a>
-    <a href="/daftar-perusahaan" class="btn btn-secondary" role="button" style="background-color: #FFC94A; border: none; color: #000000;">
+    <a href="{{ route('daftar-perusahaan') }}" class="btn btn-secondary" role="button" style="background-color: #FFC94A; border: none; color: #000000;">
         Sign Up
     </a>
 </div>
@@ -166,7 +166,7 @@
                         });
                     </script>
                 @endif
-                <form action="/Kontak-Perusahaan" method="post" style="margin-top: 55px;">
+                <form action="{{ route('postkontakperusahaan') }}" method="post" style="margin-top: 55px;">
                     @csrf
                     <input type="text" id="name" name="nama" placeholder="Nama" style="width: 100%; padding: 10px; margin-bottom: 20px; border: none; border-bottom: 1px solid #ccc; outline: none;" required>
                     

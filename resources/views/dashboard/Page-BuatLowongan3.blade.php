@@ -389,7 +389,7 @@ a.sidebar-link:hover {
         <i class="lni lni-grid-alt"></i>
     </button>
     <div class="sidebar-logo">
-    <a href="/PageDashboard">
+    <a href="{{ route('dashboardperusahaan') }}">
     <span style="color: #FFDB00;">Link</span>
     <span style="color: #3572EF;">Kerjaku</span>
 </a>
@@ -400,7 +400,7 @@ a.sidebar-link:hover {
 <ul class="sidebar-nav">
 
 <li class="sidebar-item" style="margin-top: -20px;">
-        <a href="/PageDashboard" class="sidebar-link">
+        <a href="{{ route('dashboardperusahaan') }}" class="sidebar-link">
         <i class="lni lni-protection"></i>
         <span>Dashboard</span>
         </a>
@@ -414,17 +414,17 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </a>
 <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="margin-top: 10px;">
 <li class="sidebar-item">
-<a href="/Page-StatusPelamar" class="sidebar-link">
+<a href="{{ route('statuspelamar') }}" class="sidebar-link">
     <img src="img/resume.png" alt="Logo" width="25px" height=""> Status Pelamar
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-BuatLowongan" class="sidebar-link" style="color: #FCDC94;">
+<a href="{{ route('buatlowongan') }}" class="sidebar-link" style="color: #FCDC94;">
     <img src="img/vacancy.png" alt="Logo" width="25px" style="margin-top: 10px;"> Buat Lowongan
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-LowonganKerja" class="sidebar-link">
+<a href="{{ route('lowongankerjaperusahaan') }}" class="sidebar-link">
     <img src="img/StatusPelamar.png" alt="Logo" width="25px" style="margin-top: 10px;"> Lowongan Kerja
 </a>
 </li>
@@ -432,7 +432,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </li>
 
 <li class="sidebar-item" style="margin-top: 25px;">
-        <a href="/Page-Profill" class="sidebar-link">
+        <a href="{{ route('profilperusahaan') }}" class="sidebar-link">
             <i class="lni lni-user"></i>
             <span>Profile</span>
         </a>
@@ -450,14 +450,14 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
                 <img src="img/job.png" alt="Home" width="26" height="26">
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-    <a href="/Page-BuatLowongan" style="text-decoration: none; color: inherit;">Step 1</a>
+    <a href="{{ route('buatlowongan') }}" style="text-decoration: none; color: inherit;">Step 1</a>
 </li>
            
 <li class="breadcrumb-item active" aria-current="page">
-    <a href="/Page-BuatLowongan2" style="text-decoration: none; color: inherit;">Step 2</a>
+    <a href="{{ route('buatlowongan2') }}" style="text-decoration: none; color: inherit;">Step 2</a>
 </li>
 
-<li class="breadcrumb-item active" style="margin-left: 5px;" aria-current="page"><a href="/Page-BuatLowongan3">Step 3</a></li>
+<li class="breadcrumb-item active" style="margin-left: 5px;" aria-current="page"><a href="{{ route('buatlowongan3') }}">Step 3</a></li>
 
 
 </ol>
@@ -475,11 +475,11 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
         </svg>
     </div>
     <div id="myDropdown" class="dropdown-content" style="top: 100%; left: -30px;">
-    <a href="/Page-Profill">
+    <a href="{{ route('profilperusahaan') }}">
             <img src="img/editing.png" alt="Profile Icon" width="16" height="16">
             <span>Profile</span>
         </a>
-        <a href="/">
+        <a href="{{ route('logout') }}">
             <img src="img/logout.png" alt="Profile Icon" width="16" height="16">
             <span>Logout</span>
         </a>    </div>
@@ -513,7 +513,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
     <div style="margin-left: 55px; margin-top: -75px;">
 
     <h6 style="text-align: left; margin-top: 40px;">Kota*</h6>
-    <form action="/BuatLowongan3" method="post" class="form-container">
+    <form action="{{ route('postbuatlowongan3') }}" method="post" class="form-container">
         @csrf
         <input name="negara" type="text" placeholder="Negara" required autofocus>
         
@@ -524,7 +524,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
         <input name="pos_code" type="text" placeholder="Kode Pos" required>
 
         <div class="section-buttons">
-            <a href="/BuatLowongan2">
+            <a href="{{ route('buatlowongan2') }}">
                 <button type="button">
                     <img src="svg/left.svg" alt="Kembali">
                     Kembali

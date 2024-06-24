@@ -342,7 +342,7 @@ a.sidebar-link:hover {
         <i class="lni lni-grid-alt"></i>
     </button>
     <div class="sidebar-logo">
-    <a href="/PageDashboard">
+    <a href="{{ route('dashboardperusahaan') }}">
     <span style="color: #FFDB00;">Link</span>
     <span style="color: #3572EF;">Kerjaku</span>
 </a>
@@ -353,7 +353,7 @@ a.sidebar-link:hover {
 <ul class="sidebar-nav">
 
 <li class="sidebar-item" style="margin-top: -20px;">
-        <a href="/PageDashboard" class="sidebar-link">
+        <a href="{{ route('dashboardperusahaan') }}" class="sidebar-link">
         <i class="lni lni-protection"></i>
         <span>Dashboard</span>
         </a>
@@ -367,17 +367,17 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </a>
 <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style="margin-top: 10px;">
 <li class="sidebar-item">
-<a href="/Page-StatusPelamar" class="sidebar-link">
+<a href="{{ route('statuspelamar') }}" class="sidebar-link">
     <img src="img/resume.png" alt="Logo" width="25px" height=""> Status Pelamar
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-BuatLowongan" class="sidebar-link">
+<a href="{{ route('buatlowongan') }}" class="sidebar-link">
     <img src="img/vacancy.png" alt="Logo" width="25px" style="margin-top: 10px;"> Buat Lowongan
 </a>
 </li>
 <li class="sidebar-item">
-<a href="/Page-LowonganKerja" class="sidebar-link" style="color: #FCDC94;">
+<a href="{{ route('lowongankerjaperusahaan') }}" class="sidebar-link" style="color: #FCDC94;">
     <img src="img/StatusPelamar.png" alt="Logo" width="25px" style="margin-top: 10px;"> Lowongan Kerja
 </a>
 </li>
@@ -385,7 +385,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
 </li>
 
 <li class="sidebar-item" style="margin-top: 25px;">
-        <a href="/Page-Profill" class="sidebar-link">
+        <a href="{{ route('profilperusahaan') }}" class="sidebar-link">
             <i class="lni lni-user"></i>
             <span>Profile</span>
         </a>
@@ -401,7 +401,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
   <li class="breadcrumb-item">
                 <img src="img/Lowongankerja.png" alt="Home" width="26" height="26">
             </li>
-                <li class="breadcrumb-item active" style="margin-left: 5px;" aria-current="page"><a href="/Page-LowonganKerja">Lowongan Kerja</a></li>
+                <li class="breadcrumb-item active" style="margin-left: 5px;" aria-current="page"><a href="{{ route('lowongankerjaperusahaan') }}">Lowongan Kerja</a></li>
   </ol>
 </nav>
     </div>
@@ -464,7 +464,7 @@ data-bs-target="#auth" aria-expanded="false" aria-controls="auth" id="dashboard-
             </div>
             <hr style="margin-top: 20px; border: 0; border-top: 2px solid #333;">
             <div style="display: flex; justify-content: center; margin-top: 20px;">
-                <button style="padding: 10px 20px; font-size: 16px; background-color: #FFC94A; color: #000000; border: none; border-radius: 5px; cursor: pointer; margin-right: 20px;" onclick="window.location.href='/Page-EditProfill'">Edit</button>
+                <button style="padding: 10px 20px; font-size: 16px; background-color: #FFC94A; color: #000000; border: none; border-radius: 5px; cursor: pointer; margin-right: 20px;" onclick="window.location.href='{{ route('editprofilperusahaan') }}'">Edit</button>
                 <form action="{{ route('jobs.destroy', $jobProvider->id) }}" method="POST" id="deleteForm">
                     @csrf
                     @method('DELETE')
