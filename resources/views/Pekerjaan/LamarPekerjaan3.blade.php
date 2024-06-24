@@ -177,7 +177,7 @@
 </div>
 
         <div class="dropdown-divider"></div>
-        <div class="dropdown-item" onclick="window.location.href='{{ route('home') }}';">
+        <div class="dropdown-item" onclick="window.location.href='{{ route('homee') }}';">
     <img src="svg/logout.svg" alt="Logout Icon" class="dropdown-icon">
     Logout
 </div>
